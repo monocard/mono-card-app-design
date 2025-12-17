@@ -1,111 +1,140 @@
-# Mono Card Design System
+# @monolythium/mono-card-app-design
 
-Single source of truth for design tokens across Web (ReactJS) and Mobile (React Native) platforms.
+Mono Card Design System — the **single source of truth** for all design tokens.
 
-## Theme
+- **Dark theme only**
+- **IBM Plex Sans only**
 
-**DARK THEME ONLY** - No light theme support.
+## Installation
 
-## Font
-
-**IBM Plex Sans** is the only font used across all platforms.
-
-## Structure
-
+```bash
+pnpm add @monolythium/mono-card-app-design
 ```
-design-system/
-├── tokens/           # Source of truth (JSON)
-│   ├── colors.json
-│   ├── typography.json
-│   ├── spacing.json
-│   ├── radius.json
-│   └── shadows.json
-├── web/              # Generated for ReactJS
-│   └── variables.css
-├── native/           # Generated for React Native
-│   └── tokens.ts
-└── README.md
+
+## Build
+
+To regenerate token outputs from JSON sources:
+
+```bash
+pnpm install
+pnpm run build
 ```
+
+This generates:
+
+| Output | Path | Description |
+|--------|------|-------------|
+| CSS Variables | `dist/web/variables.css` | CSS custom properties for web |
+| TypeScript | `dist/native/tokens.ts` | Source TypeScript for reference |
+| JavaScript | `dist/native/tokens.js` | CommonJS module for React Native |
+| Type Definitions | `dist/native/tokens.d.ts` | TypeScript declarations |
 
 ## Usage
 
-### ReactJS (Web)
+### Next.js (Web)
 
-Import the CSS variables file in your app entry point:
+Import CSS variables in your root layout or globals.css:
 
-```javascript
-import 'mono-card/design-system/web/variables.css';
-```
+```tsx
+// app/layout.tsx
+import '@monolythium/mono-card-app-design/web/variables.css';
 
-Use variables in CSS/SCSS:
-
-```css
-.card {
-  background-color: var(--color-surface-default);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-4);
-  box-shadow: var(--shadow-card);
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
 }
 ```
 
-### React Native
+Or in CSS:
+
+```css
+/* globals.css */
+@import '@monolythium/mono-card-app-design/web/variables.css';
+
+body {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-family: var(--font-family-primary);
+}
+```
+
+### React Native (Mobile)
 
 Import tokens directly:
 
-```typescript
-import { Colors, Typography, Spacing, Radius, Shadows } from 'mono-card/design-system/native/tokens';
+```tsx
+import { Colors, Typography, Spacing } from '@monolythium/mono-card-app-design/native';
 
 const styles = StyleSheet.create({
-  card: {
-    backgroundColor: Colors.surfaceDefault,
-    borderRadius: Radius.lg,
-    padding: Spacing[4],
-    ...Shadows.card,
+  container: {
+    backgroundColor: Colors.backgroundPrimary,
+    padding: Spacing.s4,
+  },
+  title: {
+    color: Colors.textPrimary,
+    fontSize: Typography.fontSize.xl,
+    fontFamily: Typography.fontFamily.primary,
+    fontWeight: Typography.fontWeight.bold,
   },
 });
 ```
 
-## Token Reference
+## Token Structure
 
 ### Colors
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| `--color-bg-primary` | `#0D0F14` | Main app background |
-| `--color-bg-secondary` | `#151821` | Elevated surfaces |
-| `--color-surface-default` | `#1C2029` | Card backgrounds |
-| `--color-text-primary` | `#FFFFFF` | Primary text |
-| `--color-text-secondary` | `#A1A7B5` | Secondary text |
-| `--color-accent-primary` | `#3B82F6` | Primary accent |
-| `--color-status-success` | `#10B981` | Success states |
-| `--color-status-error` | `#EF4444` | Error states |
+- `backgroundPrimary`, `backgroundSecondary`, `backgroundTertiary`, `backgroundElevated`
+- `surfaceDefault`, `surfaceHover`, `surfaceActive`, `surfaceDisabled`
+- `borderDefault`, `borderSubtle`, `borderStrong`
+- `textPrimary`, `textSecondary`, `textTertiary`, `textDisabled`, `textInverse`
+- `accentPrimary`, `accentPrimaryHover`, `accentSecondary`, `accentSecondaryHover`
+- `statusSuccess`, `statusSuccessBg`, `statusWarning`, `statusWarningBg`, `statusError`, `statusErrorBg`, `statusInfo`, `statusInfoBg`
 
-### Spacing Scale (4px base)
+### Typography
 
-| Token | Value |
-|-------|-------|
-| `--spacing-1` | 4px |
-| `--spacing-2` | 8px |
-| `--spacing-3` | 12px |
-| `--spacing-4` | 16px |
-| `--spacing-6` | 24px |
-| `--spacing-8` | 32px |
+- **Font Family**: `primary` (IBM Plex Sans), `mono` (IBM Plex Mono)
+- **Font Size**: `xs`, `sm`, `base`, `lg`, `xl`, `2xl`, `3xl`, `4xl`, `5xl`
+- **Font Weight**: `regular`, `medium`, `semibold`, `bold`
+- **Line Height**: `tight`, `normal`, `relaxed`
 
-### Border Radius
+### Spacing
 
-| Token | Value |
-|-------|-------|
-| `--radius-sm` | 4px |
-| `--radius-md` | 8px |
-| `--radius-lg` | 12px |
-| `--radius-xl` | 16px |
-| `--radius-full` | 9999px |
+- `s0` (0px), `s1` (4px), `s2` (8px), `s3` (12px), `s4` (16px), `s5` (20px), `s6` (24px), `s8` (32px), `s10` (40px), `s12` (48px), `s16` (64px), `s20` (80px), `s24` (96px)
+
+### Radius
+
+- `none`, `sm`, `md`, `lg`, `xl`, `2xl`, `full`
+
+### Shadows
+
+- `sm`, `md`, `lg`, `xl`, `card`, `dropdown`, `glow`
+
+## Token Sources
+
+All tokens are defined in JSON files under `tokens/`:
+
+```
+tokens/
+├── colors.json
+├── spacing.json
+├── typography.json
+├── radius.json
+└── shadows.json
+```
+
+**Do not edit generated files in `dist/`.** Modify the JSON sources and run `pnpm run build`.
 
 ## Rules
 
-1. **NO hardcoded colors** - Always use design tokens
-2. **NO hardcoded font sizes** - Use typography scale
-3. **NO ad-hoc spacing** - Use spacing scale
-4. **NO light theme** - Dark theme only
-5. **IBM Plex Sans only** - No other fonts permitted
-# mono-card-app-design
+1. **NO hardcoded colors** — Always use design tokens
+2. **NO hardcoded font sizes** — Use typography scale
+3. **NO ad-hoc spacing** — Use spacing scale
+4. **NO light theme** — Dark theme only
+5. **IBM Plex Sans only** — No other fonts permitted
+
+## License
+
+MIT

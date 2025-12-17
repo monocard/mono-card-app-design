@@ -1,0 +1,40 @@
+{
+  "name": "@monolythium/mono-card-app-design",
+  "version": "1.0.0",
+  "description": "Mono Card Design System - Dark Theme Only - IBM Plex Sans",
+  "license": "MIT",
+  "packageManager": "pnpm@9.15.1",
+  "main": "dist/native/tokens.js",
+  "types": "dist/native/tokens.d.ts",
+  "files": [
+    "dist",
+    "tokens"
+  ],
+  "exports": {
+    "./web/variables.css": "./dist/web/variables.css",
+    "./native": {
+      "types": "./dist/native/tokens.d.ts",
+      "import": "./dist/native/tokens.js",
+      "require": "./dist/native/tokens.js"
+    }
+  },
+  "scripts": {
+    "build:tokens": "node scripts/build-tokens.js",
+    "build": "pnpm run build:tokens"
+  },
+  "keywords": [
+    "design-system",
+    "tokens",
+    "mono-card",
+    "dark-theme",
+    "ibm-plex-sans"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monolythium/mono-card-app-design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/monolythium/mono-card-app-design/issues"
+  },
+  "homepage": "https://github.com/monolythium/mono-card-app-design#readme"
+}
