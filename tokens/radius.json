@@ -1,0 +1,11 @@
+{
+  "radius": {
+    "none": { "value": "0px", "description": "No radius" },
+    "sm": { "value": "4px", "description": "Small radius" },
+    "md": { "value": "8px", "description": "Medium radius" },
+    "lg": { "value": "12px", "description": "Large radius" },
+    "xl": { "value": "16px", "description": "Extra large radius" },
+    "2xl": { "value": "24px", "description": "2x large radius" },
+    "full": { "value": "9999px", "description": "Full/pill radius" }
+  }
+}

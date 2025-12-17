@@ -1,0 +1,17 @@
+{
+  "spacing": {
+    "0": { "value": "0px", "description": "No spacing" },
+    "1": { "value": "4px", "description": "Extra small" },
+    "2": { "value": "8px", "description": "Small" },
+    "3": { "value": "12px", "description": "Medium small" },
+    "4": { "value": "16px", "description": "Medium" },
+    "5": { "value": "20px", "description": "Medium large" },
+    "6": { "value": "24px", "description": "Large" },
+    "8": { "value": "32px", "description": "Extra large" },
+    "10": { "value": "40px", "description": "2x large" },
+    "12": { "value": "48px", "description": "3x large" },
+    "16": { "value": "64px", "description": "4x large" },
+    "20": { "value": "80px", "description": "5x large" },
+    "24": { "value": "96px", "description": "6x large" }
+  }
+}

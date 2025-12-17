@@ -1,0 +1,35 @@
+{
+  "typography": {
+    "fontFamily": {
+      "primary": { "value": "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", "description": "Primary font family" },
+      "mono": { "value": "'IBM Plex Mono', 'Courier New', monospace", "description": "Monospace font for code/numbers" }
+    },
+    "fontSize": {
+      "xs": { "value": "12px", "description": "Extra small text" },
+      "sm": { "value": "14px", "description": "Small text" },
+      "base": { "value": "16px", "description": "Base text size" },
+      "lg": { "value": "18px", "description": "Large text" },
+      "xl": { "value": "20px", "description": "Extra large text" },
+      "2xl": { "value": "24px", "description": "Heading 3" },
+      "3xl": { "value": "30px", "description": "Heading 2" },
+      "4xl": { "value": "36px", "description": "Heading 1" },
+      "5xl": { "value": "48px", "description": "Display text" }
+    },
+    "fontWeight": {
+      "regular": { "value": "400", "description": "Regular weight" },
+      "medium": { "value": "500", "description": "Medium weight" },
+      "semibold": { "value": "600", "description": "Semi-bold weight" },
+      "bold": { "value": "700", "description": "Bold weight" }
+    },
+    "lineHeight": {
+      "tight": { "value": "1.25", "description": "Tight line height for headings" },
+      "normal": { "value": "1.5", "description": "Normal line height for body" },
+      "relaxed": { "value": "1.75", "description": "Relaxed line height" }
+    },
+    "letterSpacing": {
+      "tight": { "value": "-0.025em", "description": "Tight letter spacing" },
+      "normal": { "value": "0", "description": "Normal letter spacing" },
+      "wide": { "value": "0.025em", "description": "Wide letter spacing" }
+    }
+  }
+}

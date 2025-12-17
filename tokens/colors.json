@@ -1,0 +1,49 @@
+{
+  "color": {
+    "background": {
+      "primary": { "value": "#0D0F14", "description": "Main app background" },
+      "secondary": { "value": "#151821", "description": "Elevated surfaces, cards" },
+      "tertiary": { "value": "#1C2029", "description": "Higher elevation surfaces" },
+      "elevated": { "value": "#252A36", "description": "Modals, dropdowns" }
+    },
+    "surface": {
+      "default": { "value": "#1C2029", "description": "Card backgrounds" },
+      "hover": { "value": "#252A36", "description": "Hover state for surfaces" },
+      "active": { "value": "#2E3444", "description": "Active/pressed state" },
+      "disabled": { "value": "#12151B", "description": "Disabled surfaces" }
+    },
+    "border": {
+      "default": { "value": "#2E3444", "description": "Default borders" },
+      "subtle": { "value": "#1F242E", "description": "Subtle borders" },
+      "strong": { "value": "#3D4454", "description": "Emphasized borders" }
+    },
+    "text": {
+      "primary": { "value": "#FFFFFF", "description": "Primary text" },
+      "secondary": { "value": "#A1A7B5", "description": "Secondary text" },
+      "tertiary": { "value": "#6B7280", "description": "Muted text" },
+      "disabled": { "value": "#4B5563", "description": "Disabled text" },
+      "inverse": { "value": "#0D0F14", "description": "Text on light backgrounds" }
+    },
+    "accent": {
+      "primary": { "value": "#3B82F6", "description": "Primary accent blue" },
+      "primaryHover": { "value": "#2563EB", "description": "Primary accent hover" },
+      "secondary": { "value": "#8B5CF6", "description": "Secondary accent purple" },
+      "secondaryHover": { "value": "#7C3AED", "description": "Secondary accent hover" }
+    },
+    "status": {
+      "success": { "value": "#10B981", "description": "Success state" },
+      "successBg": { "value": "#10B98120", "description": "Success background" },
+      "warning": { "value": "#F59E0B", "description": "Warning state" },
+      "warningBg": { "value": "#F59E0B20", "description": "Warning background" },
+      "error": { "value": "#EF4444", "description": "Error state" },
+      "errorBg": { "value": "#EF444420", "description": "Error background" },
+      "info": { "value": "#3B82F6", "description": "Info state" },
+      "infoBg": { "value": "#3B82F620", "description": "Info background" }
+    },
+    "card": {
+      "virtual": { "value": "#1E40AF", "description": "Virtual card gradient start" },
+      "virtualEnd": { "value": "#7C3AED", "description": "Virtual card gradient end" },
+      "physical": { "value": "#1C2029", "description": "Physical card background" }
+    }
+  }
+}
