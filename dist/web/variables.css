@@ -10,22 +10,22 @@
 
 :root {
   /* Colors */
-  --background-primary: #0D0F14;
-  --background-secondary: #151821;
-  --background-tertiary: #1C2029;
-  --background-elevated: #252A36;
-  --surface-default: #1C2029;
-  --surface-hover: #252A36;
-  --surface-active: #2E3444;
-  --surface-disabled: #12151B;
-  --border-default: #2E3444;
-  --border-subtle: #1F242E;
-  --border-strong: #3D4454;
-  --text-primary: #FFFFFF;
-  --text-secondary: #A1A7B5;
-  --text-tertiary: #6B7280;
-  --text-disabled: #4B5563;
-  --text-inverse: #0D0F14;
+  --background-primary: #0B0B0B;
+  --background-secondary: #111114;
+  --background-tertiary: #18181B;
+  --background-elevated: #1F1F23;
+  --surface-default: #18181B;
+  --surface-hover: #1F1F23;
+  --surface-active: #27272A;
+  --surface-disabled: #0E0E10;
+  --border-default: #27272A;
+  --border-subtle: #1C1C1F;
+  --border-strong: #3F3F46;
+  --text-primary: #FAFAFA;
+  --text-secondary: #A1A1AA;
+  --text-tertiary: #71717A;
+  --text-disabled: #52525B;
+  --text-inverse: #0B0B0B;
   --accent-primary: #3B82F6;
   --accent-primary-hover: #2563EB;
   --accent-secondary: #8B5CF6;
@@ -40,7 +40,7 @@
   --status-info-bg: #3B82F620;
   --card-virtual: #1E40AF;
   --card-virtual-end: #7C3AED;
-  --card-physical: #1C2029;
+  --card-physical: #18181B;
 
   /* Typography */
   --font-family-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

@@ -1,28 +1,28 @@
 {
   "color": {
     "background": {
-      "primary": { "value": "#0D0F14", "description": "Main app background" },
-      "secondary": { "value": "#151821", "description": "Elevated surfaces, cards" },
-      "tertiary": { "value": "#1C2029", "description": "Higher elevation surfaces" },
-      "elevated": { "value": "#252A36", "description": "Modals, dropdowns" }
+      "primary": { "value": "#0B0B0B", "description": "Main app background" },
+      "secondary": { "value": "#111114", "description": "Elevated surfaces, cards" },
+      "tertiary": { "value": "#18181B", "description": "Higher elevation surfaces" },
+      "elevated": { "value": "#1F1F23", "description": "Modals, dropdowns" }
     },
     "surface": {
-      "default": { "value": "#1C2029", "description": "Card backgrounds" },
-      "hover": { "value": "#252A36", "description": "Hover state for surfaces" },
-      "active": { "value": "#2E3444", "description": "Active/pressed state" },
-      "disabled": { "value": "#12151B", "description": "Disabled surfaces" }
+      "default": { "value": "#18181B", "description": "Card backgrounds" },
+      "hover": { "value": "#1F1F23", "description": "Hover state for surfaces" },
+      "active": { "value": "#27272A", "description": "Active/pressed state" },
+      "disabled": { "value": "#0E0E10", "description": "Disabled surfaces" }
     },
     "border": {
-      "default": { "value": "#2E3444", "description": "Default borders" },
-      "subtle": { "value": "#1F242E", "description": "Subtle borders" },
-      "strong": { "value": "#3D4454", "description": "Emphasized borders" }
+      "default": { "value": "#27272A", "description": "Default borders" },
+      "subtle": { "value": "#1C1C1F", "description": "Subtle borders" },
+      "strong": { "value": "#3F3F46", "description": "Emphasized borders" }
     },
     "text": {
-      "primary": { "value": "#FFFFFF", "description": "Primary text" },
-      "secondary": { "value": "#A1A7B5", "description": "Secondary text" },
-      "tertiary": { "value": "#6B7280", "description": "Muted text" },
-      "disabled": { "value": "#4B5563", "description": "Disabled text" },
-      "inverse": { "value": "#0D0F14", "description": "Text on light backgrounds" }
+      "primary": { "value": "#FAFAFA", "description": "Primary text" },
+      "secondary": { "value": "#A1A1AA", "description": "Secondary text" },
+      "tertiary": { "value": "#71717A", "description": "Muted text" },
+      "disabled": { "value": "#52525B", "description": "Disabled text" },
+      "inverse": { "value": "#0B0B0B", "description": "Text on light backgrounds" }
     },
     "accent": {
       "primary": { "value": "#3B82F6", "description": "Primary accent blue" },
@@ -43,7 +43,7 @@
     "card": {
       "virtual": { "value": "#1E40AF", "description": "Virtual card gradient start" },
       "virtualEnd": { "value": "#7C3AED", "description": "Virtual card gradient end" },
-      "physical": { "value": "#1C2029", "description": "Physical card background" }
+      "physical": { "value": "#18181B", "description": "Physical card background" }
     }
   }
 }
