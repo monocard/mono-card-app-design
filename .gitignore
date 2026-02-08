@@ -28,3 +28,6 @@ coverage/
 .cache/
 
 # Note: dist/ is NOT ignored - it's published to npm
+
+# Claude
+CLAUDE.md
