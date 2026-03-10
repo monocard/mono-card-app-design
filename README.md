@@ -1,3 +1,5 @@
+![Mono Card App Design](https://raw.githubusercontent.com/mono-labs-org/.github/prod/media/github-banners/monocard/mono-card-app-design.png)
+
 # @monolythium/mono-card-app-design
 
 Mono Card Design System — the **single source of truth** for all design tokens.
